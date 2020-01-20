@@ -1,0 +1,35 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-offset-4  col-md-4">
+
+      <div class="wrapper fadeInDown">
+        <div id="formContent">
+          <!-- Tabs Titles -->
+
+          <!-- Icon -->
+          <div class="fadeIn first">
+            <img src="https://img.icons8.com/cool-color/64/000000/circled-chevron-up.png" id="icon" alt="User Icon" />
+          </div>
+
+          <!-- Login Form -->
+          <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+            <input type="email" id="email" class="fadeIn second" ngModel name="email" placeholder="email">
+            <input type="text" id="name" class="fadeIn second" ngModel name="name" placeholder="user name">
+            <input type="password" id="password" class="fadeIn third" ngModel name="password" placeholder="password">
+            <button type="submit" class="fadeIn fourth" >Sing in</button>
+          
+          </form>
+
+          <!-- Remind Passowrd -->
+          <div id="formFooter">
+            <a routerLink="/login" >Login</a>
+          </div>
+
+        </div>
+      </div>
+
+
+      <!--***********-->
+    </div>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<div class="container-fluid" [hidden]="type === null">
+  <div class="row">
+  <div class="col-md-offset-4 col-md-4" >
+    <div class="wrapper fadeInDown">
+      <div class="alertContent">
+    <div class="fadeIn first">
+      
+    
+      <div class="alert" [ngClass]="{'alert-success':type==='success','alert-danger':type==='error'}">
+
+        {{message}}
+    </div>
+    </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!--/********************/-->

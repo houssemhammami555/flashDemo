@@ -1,0 +1,28 @@
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand"  routerLink="">FlashScore</a>
+    </div>
+    <ul class="nav navbar-nav navbar-left">
+      <li routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" ><a routerLink="">Home</a></li>
+      <li routerLinkActive="active" *ngIf="isLoggedIn">
+        <a routerLink="/matches" > <span class="glyphicon glyphicon-fire"></span>Matches</a>
+      </li>
+      <li routerLinkActive="active" *ngIf="isLoggedIn"><a routerLink="/favClubs" > <span class="glyphicon glyphicon-star">
+
+      </span>Favorites</a></li>
+      <li routerLinkActive="active" *ngIf="isLoggedIn"><a routerLink="/allClubs"> <span class="glyphicon glyphicon-book"></span> Clubs</a></li>
+          <li routerLinkActive="active" *ngIf="isAdmin">
+            <a routerLink="/users"> <span class="glyphicon glyphicon-user"></span>User</a>
+          </li>
+    </ul>
+  
+      <ul class="nav navbar-nav navbar-right">
+        <li routerLinkActive="active" *ngIf="isLoggedIn"><a routerLink="#"> <span class="glyphicon glyphicon-user"></span> {{name}} </a></li>
+          <li routerLinkActive="active" *ngIf="!isLoggedIn"><a  routerLink="/login">Login &nbsp; <span class="glyphicon glyphicon-log-in"></span></a></li>
+         <li> <a href="#" *ngIf="isLoggedIn" (click)="onLogout()">Logout<span class="glyphicon glyphicon-log-out"></span></a></li>  
+
+      
+      </ul>
+  </div>
+</nav>

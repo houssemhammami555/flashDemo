@@ -1,0 +1,41 @@
+<div id="main">
+  <div class="container-fluid" *ngIf="isAdmin">
+    <div class="row">
+      <div class="col-md-offset-2 col-md-8">
+        <table class="table" id="table">
+
+          <thead class="primary">
+            <tr>
+              <th> Registration Date </th>
+              <th> Id </th>
+              <th> Email </th>
+              <th> Name </th>
+            
+            <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let user of usersArray" class="success" >
+
+              <td> {{user.registrationDate | date}} </td>
+              <td> {{user.$key}} </td>
+              <td> {{user.email}} </td>
+              <td> {{user.name}} </td>
+             <td class="text-center" *ngIf= "adminId"> <button type="submit" class="btn btn-danger "  (click)="onDelete(user.$key)">
+                  <span class="glyphicon glyphicon-remove" ></span></button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+
+
+
+
+
+
+
+      </div>
+      </div>
+      </div>
+  
