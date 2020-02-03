@@ -6,7 +6,7 @@ import { ClubsService } from './../sharedAlert/clubs.service';
 import { NgForm } from "@angular/forms";
 import { AlertService } from './../sharedAlert/alert.service';
 import { AngularFireDatabase, AngularFireList , AngularFireObject  } from '@angular/fire/database';
-import { element } from '@angular/core/src/render3';
+
 @Component({
   selector: 'app-all-clubs',
   templateUrl: './all-clubs.component.html',
